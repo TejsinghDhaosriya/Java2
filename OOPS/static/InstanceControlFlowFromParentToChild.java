@@ -5,7 +5,7 @@ int x=10;
 m1();
 System.out.println("Parent Instance Block");
 }
-Parent()
+InstanceControlFlowFromParentToChild()
 {
     System.out.println("Parent Class Constructor");
 }
@@ -21,14 +21,14 @@ public void m1()
  int y=20;
 }
 
-class child extends InstanceControlFlowFromParentToChild
+class Child extends InstanceControlFlowFromParentToChild
   {
    int i=100;
    {
        m2();
        System.out.println("Child first Instance Block");
    }
-   child()
+   Child()
     {
         System.out.println("Child Class Constructor");
     }
@@ -43,6 +43,6 @@ class child extends InstanceControlFlowFromParentToChild
           System.out.println("child second instance block");
       }
       int j=200;
-    }
+}
 
-  }
+  
