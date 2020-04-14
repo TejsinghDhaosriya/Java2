@@ -5,6 +5,24 @@ class Cat implements Serializable{
 
   String name = "cat";
   transient String pwd = "tej";
+
+
+  private void writeObject(ObjectOutputStream os) throws Exception
+    {
+        os.defaultWriteObject();
+        String spwd = "123"+pwd;
+       os.writeObject(spwd);
+    }
+   private void readObject(ObjectInputStream is) throws Exception
+    {
+    is.defaultReadObject();
+    String spwd = (String) is.readObject();
+    pwd= spwd.substring(3);
+
+    }
+
+
+
 }
 
 
