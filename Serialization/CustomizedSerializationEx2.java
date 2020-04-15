@@ -10,6 +10,22 @@ class Account implements Serializable
     transient String pwd  = "ramu";
     transient int pin = 1234;
 
+    private void writeObject(ObjectOutputStream os) throws Exception
+     {
+         os.defaultWriteObject();
+         int epin = pin + 4444;
+         String epwd = "tej" +pwd;
+         os.writeObject(epin);
+         os.writeObject(epwd);
+     }
+     private void readObject(ObjectInputStream is) throws Exception
+      {
+          is.defaultReadObject();
+          int epin =(int)is.readObject();
+          String epwd =(String) is.readObject();
+          pin = 4444-epin;
+          pwd = epwd.substring(3);
+        }
 }
 
 class CustomizedSerializationEx2
