@@ -7,8 +7,8 @@ import java.io.ObjectInputStream;
 class Account implements Serializable
 {
     String username = "tej";
-    String pwd  = "ramu";
-    int pin = 1234;
+    transient String pwd  = "ramu";
+    transient int pin = 1234;
 
 }
 
