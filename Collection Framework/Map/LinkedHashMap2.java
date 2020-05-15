@@ -1,9 +1,9 @@
 import java.util.*;
 
-class HashMapDemo{
+class LinkedHashMap2{
   public static void main(String[] args)
   {
-    HashMap m = new HashMap();
+    LinkedHashMap m = new LinkedHashMap();
     m.put("100","vijay");
     m.put(200,"ram2");
     m.put(300,"ram3");
@@ -13,7 +13,7 @@ class HashMapDemo{
     //Object o = m.remove(200);
     System.out.println(o);
     System.out.println(m);
-   HashMap m2 = new HashMap();
+   LinkedHashMap m2 = new LinkedHashMap();
    m2.putAll(m);
 
   Object o2  = m2.size();
