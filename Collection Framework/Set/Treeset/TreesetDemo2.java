@@ -19,19 +19,20 @@ class TreesetDemo{
     }
 
 }
-class MyCompare implements Comparator
+ class MyCompare implements Comparator
  {
   public int Compare(Object ob1 ,Object ob2)
     {
      Integer i1 =  (Integer)ob1;
      Integer i2 =  (Integer) ob2;
-     if(i1>i2)
-         return -1;
-     else if (i1<i2)
-         return +100;
-      else 
-      return 0;
+   //   if(i1>i2)
+   //       return -1;
+   //   else if (i1<i2)
+   //       return +100;
+   //    else 
+   //    return 0;
 
-    }
+   return i1.compareTo(i2);
+}
 
  }
