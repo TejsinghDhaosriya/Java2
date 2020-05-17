@@ -2,15 +2,15 @@ import java.util.*;
 import java.lang.*;
 import static java.lang.System.out;
 
-class TreesetDemo{
+class TreesetDemo2{
    public static void main(String []args)
     {
      TreeSet t = new TreeSet(new MyCompare());
     // t.add("a");
-     t.add("1");
-     t.add("5");
-     t.add("3");
-     t.add("0");
+     t.add(1);
+     t.add(5);
+     t.add(3);
+     t.add(0);
     // t.add("A");
      //t.add("b");
     
@@ -21,7 +21,7 @@ class TreesetDemo{
 }
  class MyCompare implements Comparator
  {
-  public int Compare(Object ob1 ,Object ob2)
+  public int compare(Object ob1 ,Object ob2)
     {
      Integer i1 =  (Integer)ob1;
      Integer i2 =  (Integer) ob2;
@@ -32,7 +32,7 @@ class TreesetDemo{
    //    else 
    //    return 0;
 
-   return i1.compareTo(i2);
+   return -i1.compareTo(i2);
 }
 
  }
