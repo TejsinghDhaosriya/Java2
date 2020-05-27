@@ -18,6 +18,7 @@ class Tej {
   out.println(l);
   out.println(Collections.binarySearch(l,'C',new mycomp()));
   out.println(Collections.binarySearch(l,'D',new mycomp()));
+  out.println(Collections.binarySearch(l,'D'));
    }
 }
 
