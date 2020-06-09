@@ -13,5 +13,14 @@ public class DataTimeAPI2 {
    int yyyy= date.getYear();
    out.println(dd+"..."+mm+"..."+yyyy);
   out.printf("%d-%d-%d",dd,mm,yyyy);
+  
+
+  LocalTime time = LocalTime.now();
+  out.println(time);
+  int h = time.getHour();
+  int m = time.getMinute();
+  int s = time.getSecond();
+  int ns = time.getNano();
+  out.printf("%d:%d:%d:%d",h,m,s,ns);
   }
 }
