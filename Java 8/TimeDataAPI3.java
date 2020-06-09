@@ -30,6 +30,11 @@ public class TimeDataAPI3 {
 
 
 
+LocalDate birthday = LocalDate.of(1999,Month.JULY,22);
+LocalDate today = LocalDate.now();
+Period p = Period.between(birthday,today);
+out.printf("Your age is %d years %d month %d days",p.getYears(),p.getMonths(),p.getDays());
+
 
 
   }
